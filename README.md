@@ -78,7 +78,7 @@ the pairing exercises together and give feedback.
 
 ### Welcome
 
-- [ ] [Welcome to Technical Interview Preparation](./00-welcome/00-welcome-to-technical-interview-preparation)
+- [x] [Welcome to Technical Interview Preparation](./00-welcome/00-welcome-to-technical-interview-preparation)
 - [ ] [Algorithmic Problem Solving](./00-welcome/01-algorithmic-problem-solving)
 - [ ] [A Note on Testing](./00-welcome/02-a-note-on-testing)
 - [ ] [Problem Solving Tips](./00-welcome/03-problem-solving-tips)
