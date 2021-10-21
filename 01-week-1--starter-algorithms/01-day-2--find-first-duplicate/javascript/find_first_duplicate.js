@@ -1,6 +1,21 @@
 function findFirstDuplicate(arr) {
-  // type your code here
+  // initilize an empty set called uniques
+  const uniques = new Set()
+  //iterate through the input arr
+    for (const value of arr) {
+      // if the value is in uniques, return the value
+      if (uniques.has(value)) {
+        return value;
+      }
+      // else add value to the set
+      uniques.add(value)
+    }
+
+    // return -1 if no duplicate found during iteration
+    return -1;
 }
+
+
 
 if (require.main === module) {
   // add your own tests in here
