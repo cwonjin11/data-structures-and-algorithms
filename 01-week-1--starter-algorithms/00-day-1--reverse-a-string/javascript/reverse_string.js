@@ -4,7 +4,6 @@ function reverseString(str) {
   //***********************************************************/
   // initialize a variable called reversed with an empty string
   let reversed = '';
-
   // iterate backward through the input string
   // for(i = str.length - 1; i > -1; --i) {
   for(let i = str.length - 1; i >=0; i--) {
