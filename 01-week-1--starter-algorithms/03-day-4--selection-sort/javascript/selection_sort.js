@@ -1,11 +1,24 @@
 function selectionSort(arr) {
   // type your code here
+  const sortedArray = [];
+
+  while (arr.length > 0) {
+    const min = Math.min(...arr)
+    // console.log(min)
+    const index = arr.indexOf(min)
+    // console.log("index==>",index)
+    // console.log(arr)
+    sortedArray.push(min);
+    arr.splice(index,1);
+  }
+  return sortedArray;
+
 }
 
 if (require.main === module) {
   // add your own tests in here
-  console.log("Expecting: [-1, 2, 3, 5]");
-  console.log("=>", selectionSort([3, -1, 5, 2]));
+  console.log("Expecting: [-1, 2, 3, 4, 5]");
+  console.log("=>", selectionSort([3, -1, 5, 4, 2]));
 
   console.log("");
 
