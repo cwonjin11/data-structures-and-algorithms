@@ -7,7 +7,12 @@ function reverseString(str) {
   // iterate backward through the input string
   // for(i = str.length - 1; i > -1; --i) {
   for(let i = str.length - 1; i >=0; i--) {
-    console.log(str, "<===")
+    // console.log(str, "<===")
+    // console.log(str.length)
+    // console.log(str[3])
+    // console.log(str[2])
+    // console.log(str[1])
+    // console.log(str[0])
   // set reversed to reversed + current character
     reversed = reversed + str[i];
   }
