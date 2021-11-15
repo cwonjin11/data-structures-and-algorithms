@@ -1,11 +1,15 @@
 require 'set'
+require 'pry'
 def find_first_duplicate(arr)
   # type your code in here
   result = Set.new
 
   arr.each do |value|
+    binding.pry
     return value if result.include?(value)
+    binding.pry
     result.add(value)
+    binding.pry
   end
 
   -1
