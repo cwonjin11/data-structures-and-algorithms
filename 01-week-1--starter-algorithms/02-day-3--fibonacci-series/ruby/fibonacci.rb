@@ -1,5 +1,19 @@
+# require 'pry'
 def fibonacci(num)
   # type your code in here
+  last_two = [0, 1]
+  return last_two[num] if num < 2
+
+  (num - 1).times do 
+    sum = last_two[0] + last_two[1]
+    last_two = [last_two[1], sum]
+  end
+  # binding.pry
+
+  last_two.last
+
+
+
 end
 
 if __FILE__ == $PROGRAM_NAME
