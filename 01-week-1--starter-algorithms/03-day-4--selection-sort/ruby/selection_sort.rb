@@ -1,6 +1,18 @@
+# require 'pry'
 def selection_sort(arr)
   # type your code in here
+  sorted = []
+# binding.pry
+  until arr.length == 0
+    min = arr.min
+    idx = arr.index(min)
+    sorted << min
+    arr.delete_at(idx)
+  end
+
+  sorted
 end
+
 
 if __FILE__ == $PROGRAM_NAME
   puts "Expecting: [-1, 2, 3, 5]"
