@@ -1,14 +1,66 @@
-function findShortestString(arr) {
-  let shortestString = arr[0]
-  // type your code here
+// function findShortestString(arr) {
 
-  arr.forEach(string => {
-    if (string.length < shortestString.length) {
-      shortestString = string;
-    }
-  });
-  return shortestString;
+//   let shortest = arr[0]
+  
+//   arr.forEach(string => {
+//     if(string.length < shortest.length){
+//       shortest = string
+//     }
+//   })
+//   return shortest
+// }
+
+
+function findShortestString(arr) {
+
+  // let shortest = arr[0]
+
+  //   for(let i=0; i<arr.length; i++){
+  //     // if(arr[i].length < shortest.length){
+  //     //   shortest = arr[i]
+  //       arr[i].length < shortest.length ? shortest = arr[i] : shortest 
+  //     // }
+  //   }
+  // return shortest
+
+  return arr.reduce((shortest, currentString) => 
+  currentString.length < shortest.length ? currentString : shortest);
+  
 }
+
+console.log(findShortestString(['flower', 'juniper', '', 'lily', 'dadelion']))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function findShortestString(arr) {
+//   let shortestString = arr[0]
+//   // type your code here
+
+//   arr.forEach(string => {
+//     if (string.length < shortestString.length) {
+//       shortestString = string;
+//     }
+//   });
+//   return shortestString;
+// }
 
 if (require.main === module) {
   // add your own tests in here
