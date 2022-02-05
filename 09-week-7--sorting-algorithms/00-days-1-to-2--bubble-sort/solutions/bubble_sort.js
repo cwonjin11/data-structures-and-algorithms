@@ -17,6 +17,7 @@ function bubbleSort(arr) {
   }
 
   return arr;
+
 }
 
 if (require.main === module) {
