@@ -23,7 +23,7 @@ function fibonacci(num) {
   let lastTwo = [0, 1]
 
   // loop 
-    //variable sum = lastTwo[0] plush lastTwo[1]
+    //variable sum = lastTwo[0] plus lastTwo[1]
     // reassign values of lastTwo[0] as lastTwo[1] and lastTwo[1] as sum
   //return lastTwo[1]
   for(let i=0; i<num-1; i++){
