@@ -35,17 +35,40 @@ Problem : Find first duplicate value from a given array
 // }
 // console.log(findFirstDuplicate([2, 1, 3, 2, 3]))
 
+
+
+//using new Set
+// const findFirstDuplicate = (arr) => {
+
+//   let uniq = new Set()
+
+//   for(const num of arr){
+//     if(uniq.has(num)){
+//       return num
+//     } else {
+//       uniq.add(num)
+//       console.log(uniq)
+//     }
+//   }
+// }
+// console.log(findFirstDuplicate([2, 1, 3, 3, 2]))
+
+
+//using array method
 const findFirstDuplicate = (arr) => {
-  const uniq = new Set()
-    for (const value of arr){
-      if(uniq.has(value)){
-       return value
-      } 
-      uniq.add(value)
+
+  let output = []
+
+  for(let i = 0; i < arr.length; i++){
+    if(output.includes(arr[i])){
+      return arr[i]
+    } else {
+      output.push(arr[i])
     }
+  }
   return -1
+
 }
-console.log(findFirstDuplicate([2, 1, 3, 2, 3]))
 
 
 
@@ -53,9 +76,16 @@ console.log(findFirstDuplicate([2, 1, 3, 2, 3]))
 
 
 
-
-
-
+// const findFirstDuplicate = (arr) => {
+//   const uniq = new Set()
+//     for (const value of arr){
+//       if(uniq.has(value)){
+//        return value
+//       } 
+//       uniq.add(value)
+//     }
+//   return -1
+// }
 
 
 
