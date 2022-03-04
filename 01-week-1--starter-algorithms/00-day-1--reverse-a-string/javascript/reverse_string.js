@@ -27,16 +27,29 @@
     //reverse a string. Your method receives an argument, string, and output that string with its letters in reverse order
     //'abc' => 'cba', '123' => '321', 'aaa=>aaa'
     //pseudocode
+  // const reverseString = (str) => {
+
+  //   let output = ""
+
+  //     for(let i = str.length-1; i > -1  ; --i){
+  //       // keep adding str[i] to output
+  //       output += str[i]
+  //     }
+
+  //   return output
+  // }
+
+
+
   const reverseString = (str) => {
 
     let output = ""
-
-      for(let i = str.length-1; i > -1  ; --i){
-        // keep adding str[i] to output
-        output += str[i]
-      }
-
+    for(let i = str.length - 1; i >=0; i--){
+      output += str[i] 
+    }
     return output
+
+
   }
 
   console.log(reverseString('123'))
