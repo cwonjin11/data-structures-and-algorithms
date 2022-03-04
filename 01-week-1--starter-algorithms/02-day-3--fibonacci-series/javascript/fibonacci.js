@@ -12,29 +12,63 @@
 // iterate fibonacci array
 // return nth number
 
-function fibonacci(num) {
+// function fibonacci(num) {
 
-  //edge case : if num is less than two, return num
-  if (num < 2) {
+//   //edge case : if num is less than two, return num
+//   if (num < 2) {
+//     return num
+//   }
+
+//   // initialize a variable lastTwo with 0,1 for the last two numbers.
+//   let lastTwo = [0, 1]
+
+//   // loop 
+//     //variable sum = lastTwo[0] plus lastTwo[1]
+//     // reassign values of lastTwo[0] as lastTwo[1] and lastTwo[1] as sum
+//   //return lastTwo[1]
+//   for(let i=0; i<num-1; i++){
+//     const sum = lastTwo[0] + lastTwo[1]
+//     lastTwo = [lastTwo[1], sum]
+//   }
+//   return lastTwo[1]
+
+// }
+
+
+//using recursive with memoization
+// takes very long time if num is big
+// function fibonacci(num) {
+
+//   if(num < 2){
+//     return num
+//   }
+
+//   return fibonacci(num - 1) + fibonacci(num - 2)
+
+// }
+
+
+//using recursive with memoization
+// we use memoization not to calculate the same calcuation we've done before.
+//most efficient way
+function fibonacci(num, memo = {}) {
+
+  console.log(memo)
+  if(num in memo){
+    return memo[num]
+  }
+  if(num < 2){
     return num
   }
 
-  // initialize a variable lastTwo with 0,1 for the last two numbers.
-  let lastTwo = [0, 1]
-
-  // loop 
-    //variable sum = lastTwo[0] plus lastTwo[1]
-    // reassign values of lastTwo[0] as lastTwo[1] and lastTwo[1] as sum
-  //return lastTwo[1]
-  for(let i=0; i<num-1; i++){
-    const sum = lastTwo[0] + lastTwo[1]
-    lastTwo = [lastTwo[1], sum]
-  }
-  return lastTwo[1]
+ memo[num] =  fibonacci(num - 1, memo) + fibonacci(num - 2, memo)
+  return memo[num]
 
 }
 
-fibonacci(3)  //=> 2
+
+
+// console.log(fibonacci(100)) //=> 2
 
 
 
