@@ -1,21 +1,62 @@
 
+// function selectionSort(arr) {
+
+ 
+//   let sorted = []
+//   let len = arr.length // must declare a variable for length of arr because we are using splice at the and that 
+//   console.log(len)
+//   for(let i = 0; i < len; i++){
+//     let min = Math.min(...arr)
+//     sorted.push(min)
+//     let index = arr.indexOf(min)
+//     arr.splice(index, 1)
+//   }
+//   return sorted
+  
+// }
+
+
 function selectionSort(arr) {
 
-  let sorted = []
-  // for (let i = 0; i < arr.length; i++){
-  while (arr.length > 0) {
+
+  let output = []
+
+  while(arr.length > 0){
     let min = Math.min(...arr)
+    output.push(min)
     let index = arr.indexOf(min)
-    sorted.push(min)
     arr.splice(index, 1)
   }
-  return sorted
+
+  return output
+
 
 }
 
-console.log(selectionSort([1]))
+
+//   let sa = [];
+//   let len = a.length;
+//  for(let i=0;i<len;i++) {
+//    sa.push(Math.min(...a));
+//     a.splice(a.indexOf(Math.min(...a)), 1)
+//  }
+ 
+// console.log(selectionSort([1]))
 
 
+// function selectionSort(arr) {
+
+//   let sorted = []
+//   // for (let i = 0; i < arr.length; i++){
+//   while (arr.length > 0) {
+//     let min = Math.min(...arr)
+//     let index = arr.indexOf(min)
+//     sorted.push(min)
+//     arr.splice(index, 1)
+//   }
+//   return sorted
+
+// }
 
 
 
